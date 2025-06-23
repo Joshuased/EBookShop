@@ -1,10 +1,10 @@
-package com.example.ebookshop.model; // This defines the "folder path" as a Java package
+package com.example.ebookshop.model; 
 import jakarta.validation.constraints.*;
 
-import jakarta.persistence.*; // This allows us to use annotations to map to the database
+import jakarta.persistence.*; 
 
-@Entity  // Tells Spring Boot: "This class maps to a table in the database"
-@Table(name = "books") // The table in your database is called "books"
+@Entity
+@Table(name = "books")
 public class Book {
 
     @Id
@@ -26,7 +26,6 @@ public class Book {
     @NotBlank
     private String imageUrl;
 
-    // Java needs getters and setters to access private fields
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
