@@ -8,7 +8,6 @@ import java.util.*;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
     
-    // Spring will automatically implement this based on the method name!
     Optional<Book> findById(int id);
     List<Book> findAllByOrderByPriceDesc();
     List<Book> findAllByOrderByPriceAsc();
