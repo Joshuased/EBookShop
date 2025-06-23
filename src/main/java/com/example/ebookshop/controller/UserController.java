@@ -1,4 +1,3 @@
-// Updated UserController.java
 package com.example.ebookshop.controller;
 
 import com.example.ebookshop.dto.LoginRequest;
@@ -25,19 +24,19 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    // GET Method /users
+    // GET /users
     @GetMapping
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    //GET Method /users/user_name
+    //GET /users/user_name
     @GetMapping("/{username}")
     public Optional<User> getUserByName(@PathVariable String username){
         return userRepository.findByUsername(username);
     }
 
-    //POST Request /users/login
+    //POST /users/login
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest request) {
         Optional<User> userOptional = userRepository.findByUsername(request.getUsername());
@@ -56,7 +55,7 @@ public class UserController {
         return ResponseEntity.ok(Map.of("message", "Login successful"));
     }
 
-    // POST Request /users
+    // POST /users
     @PostMapping
     public ResponseEntity<Map<String, String>> addUser(@Valid @RequestBody User user) {
         userRepository.save(user);
