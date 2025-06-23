@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ebook Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ebook Shop</h1>
+
+  <button onclick="loadBooks()">Load All Books</button>
+  <button onclick="loadSorted('price')">Sort by Price DESC</button>
+  <button onclick="loadSorted('price/asc')">Sort by Price ASC</button>
+    <button onclick="loadSorted('title')">Sort by Title A-Z</button>
+    <button onclick="loadSorted('id/asc')">Sort by Id ASC</button>
+  <button onclick="toggleEditMode()" style="margin:10px;">Edit Books</button>
+  <button onclick="addBook()">Add</button>
+  <div id="bookList" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
