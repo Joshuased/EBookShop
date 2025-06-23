@@ -8,10 +8,7 @@ import java.util.*;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
     
-    // Spring will automatically implement this based on the method name!
     Optional<User> findById(int id);
-
     boolean existsByUsername(String username);
-    
     Optional<User> findByUsername(String username);
 }
