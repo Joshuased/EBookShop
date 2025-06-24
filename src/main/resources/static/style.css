@@ -76,7 +76,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: start; /* or center/space-between as needed */
+  justify-content: start;
 }
 
 @media (max-width: 600px) {
