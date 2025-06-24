@@ -17,7 +17,7 @@ function register() {
             const errorText = await response.text();
             throw new Error(errorText || "Registration failed");
         }
-        return response.json(); // assuming Spring returns the created user object
+        return response.json();
     })
     .then(data => {
         alert("Registration successful!");
